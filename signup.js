@@ -2,7 +2,7 @@ const express= require('express');
 const bodyparser=require('body-parser');
 const mongoose=require('mongoose');
 const UserSchema = require('./Schema');
-const StockSchema = require('./Schema');
+const StockSchema = require('./Schema2');
 
 mongoose.connect("mongodb://localhost:27017/UserDetails",{useNewUrlParser:true});
 
@@ -33,7 +33,7 @@ app.post('/signup',(req,res)=>{
         status:req.body.status
     });
     console.log(user);    
-    User.create(req.body,(err)=>{
+    User.create(user,(err)=>{
         if(err)
         {
             console.log(err);

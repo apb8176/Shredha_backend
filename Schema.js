@@ -11,8 +11,3 @@ const User= new mongoose.Schema({
 
 module.exports= User;
 
-const Stock= new mongoose.Schema({
-    item: [{}]
- });
-
-module.exports= Stock;
